@@ -1,0 +1,11 @@
+{
+"meta":{"test_sets":["test"],"test_metrics":[{"best_value":"Min","name":"PairLogit"}],"learn_metrics":[{"best_value":"Min","name":"PairLogit"}],"launch_mode":"Train","parameters":"","iteration_count":7,"learn_sets":["learn"],"name":"experiment"},
+"iterations":[
+{"learn":[0.689903738],"iteration":0,"passed_time":4.546021858,"remaining_time":27.27613115,"test":[0.689874253]},
+{"learn":[0.6868006341],"iteration":1,"passed_time":9.40677699,"remaining_time":23.51694247,"test":[0.6867115468]},
+{"learn":[0.6839429738],"iteration":2,"passed_time":13.53821752,"remaining_time":18.0509567,"test":[0.6837968714]},
+{"learn":[0.6814139972],"iteration":3,"passed_time":18.60638461,"remaining_time":13.95478846,"test":[0.6812405595]},
+{"learn":[0.679168177],"iteration":4,"passed_time":23.09213315,"remaining_time":9.23685326,"test":[0.6789501631]},
+{"learn":[0.6772412959],"iteration":5,"passed_time":27.361074,"remaining_time":4.560178999,"test":[0.6769844855]},
+{"learn":[0.6755898084],"iteration":6,"passed_time":31.59996179,"remaining_time":0,"test":[0.675317765]}
+]}

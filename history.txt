@@ -1,0 +1,254 @@
+Загружаем данные...
+Объединяем таблицы...
+Формируем таргет...
+Разбиваем данные...
+Ограничиваем число записей на пользователя в тренировочном наборе...
+Формируем CatBoost Pool...
+Обучаем модель CatBoost на CPU...
+    params = {
+        'iterations': 700,
+        'depth': 6,
+        'learning_rate': 0.1,
+        'loss_function': 'PairLogit',  # Функция потерь для ранжирования
+        'task_type': 'CPU',
+        'thread_count': -1,
+        'verbose': 100
+    }
+0:	learn: 0.4990337	test: 0.6883828	best: 0.6883828 (0)	total: 150ms	remaining: 1m 44s
+500:	learn: 0.0014003	test: 1.4481391	best: 0.6883828 (0)	total: 2.68s	remaining: 1.06s
+699:	learn: 0.0013883	test: 1.4682550	best: 0.6883828 (0)	total: 3.77s	remaining: 0us
+
+bestTest = 0.6883828292
+bestIteration = 0
+
+Shrink model to first 1 iterations.
+0.5470085470085471
+Делаем предсказания на тестовом наборе...
+Первые 10 предсказаний:
+[-0.0672594  -0.07824586 -0.07824586 -0.0672594  -0.0672594  -0.0672594
+ -0.07824586 -0.07824586 -0.0672594  -0.07824586]
+Времени всего прошло: 103.70615911483765
+
+
+//COLAB
+Загружаем данные...
+Объединяем таблицы...
+Формируем таргет...
+Разбиваем данные...
+Ограничиваем число записей на пользователя в тренировочном наборе...
+Формируем CatBoost Pool...
+Обучаем модель CatBoost на CPU...
+Default metric period is 5 because NDCG is/are not implemented for GPU
+Metric NDCG:type=Base is not implemented on GPU. Will use CPU for metric computation, this could significantly affect learning time
+Metric NDCG:type=Base is not implemented on GPU. Will use CPU for metric computation, this could significantly affect learning time
+0:	test: 0.5208433	best: 0.5208433 (0)	total: 195ms	remaining: 3m 14s
+500:	test: 0.5764583	best: 0.5767233 (480)	total: 8.31s	remaining: 8.28s
+999:	test: 0.5769966	best: 0.5772634 (735)	total: 19.8s	remaining: 0us
+bestTest = 0.5772633964
+bestIteration = 735
+Shrink model to first 736 iterations.
+0.5284724744451293
+Делаем предсказания на тестовом наборе...
+Первые 10 предсказаний:
+[ 0.09740604  0.11841088  0.06161428 -0.06269718 -0.11442237  0.19956411
+  0.13582219 -0.0183365   0.19116278  0.10903412]
+Времени всего прошло: 61.82733488082886
+
+20/2.5
+Загружаем данные...
+Объединяем таблицы...
+Формируем таргет...
+Разбиваем данные...
+Ограничиваем число записей на пользователя в тренировочном наборе...
+Формируем CatBoost Pool...
+Обучаем модель CatBoost на CPU...
+Default metric period is 5 because NDCG is/are not implemented for GPU
+Metric NDCG:type=Base is not implemented on GPU. Will use CPU for metric computation, this could significantly affect learning time
+Metric NDCG:type=Base is not implemented on GPU. Will use CPU for metric computation, this could significantly affect learning time
+0:	test: 0.4860324	best: 0.4860324 (0)	total: 104ms	remaining: 1m 44s
+500:	test: 0.5422547	best: 0.5423936 (460)	total: 17.5s	remaining: 17.4s
+999:	test: 0.5427109	best: 0.5427145 (995)	total: 34.6s	remaining: 0us
+bestTest = 0.5427145374
+bestIteration = 995
+Shrink model to first 996 iterations.
+0.5335794719432189
+Делаем предсказания на тестовом наборе...
+Первые 10 предсказаний:
+[-0.02278558  0.13355918  0.0486093  -0.12377    -0.10961525  0.05623508
+  0.06719083 -0.08251764  0.07709598 -0.10771747]
+Времени всего прошло: 56.75960421562195
+
+Default metric period is 5 because QueryCrossEntropy is/are not implemented for GPU
+0:	learn: 0.2847662	test: 0.2784693	best: 0.2784693 (0)	total: 198ms	remaining: 3m 17s
+500:	learn: 0.2775967	test: 0.2744899	best: 0.2739546 (45)	total: 1m 23s	remaining: 1m 23s
+999:	learn: 0.2764660	test: 0.2749480	best: 0.2739546 (45)	total: 2m 45s	remaining: 0us
+bestTest = 0.2739546237
+bestIteration = 45
+Shrink model to first 46 iterations.
+0.53148876256946
+        'iterations': 1000,
+        'depth': 6,
+        'learning_rate': 0.5,
+        #'eval_metric': metric,
+        'loss_function': 'QueryCrossEntropy',
+
+Default metric period is 5 because QueryCrossEntropy is/are not implemented for GPU
+0:	learn: 0.2871067	test: 0.2808788	best: 0.2808788 (0)	total: 141ms	remaining: 14s
+99:	learn: 0.2794408	test: 0.2740212	best: 0.2739255 (50)	total: 13.1s	remaining: 0us
+bestTest = 0.2739255101
+bestIteration = 50
+Shrink model to first 51 iterations.
+0.5324546506431712
+        'iterations': 100,
+        'depth': 6,
+        'learning_rate': 0.5,
+        #'eval_metric': metric,
+        'loss_function': 'QueryCrossEntropy',
+
+Default metric period is 5 because QueryCrossEntropy is/are not implemented for GPU
+0:	learn: 0.2972223	test: 0.2911392	best: 0.2911392 (0)	total: 228ms	remaining: 22.6s
+99:	learn: 0.2806582	test: 0.2740971	best: 0.2740971 (99)	total: 12.1s	remaining: 0us
+bestTest = 0.274097126
+bestIteration = 99
+0.5282276612793705
+        'iterations': 100,
+        'depth': 6,
+        'learning_rate': 0.05,
+        #'eval_metric': metric,
+        'loss_function': 'QueryCrossEntropy',
+
+Default metric period is 5 because QueryCrossEntropy is/are not implemented for GPU
+0:	learn: 0.2972223	test: 0.2911392	best: 0.2911392 (0)	total: 385ms	remaining: 38.1s
+99:	learn: 0.2804288	test: 0.2740299	best: 0.2740299 (99)	total: 31.3s	remaining: 0us
+bestTest = 0.2740298508
+bestIteration = 99
+0.5306482822023377
+        'iterations': 100,
+        'depth': 8,
+        'learning_rate': 0.05,
+        #'eval_metric': metric,
+        'loss_function': 'QueryCrossEntropy',
+
+30/7
+Загружаем данные...
+Объединяем таблицы...
+Формируем таргет...
+Разбиваем данные...
+Ограничиваем число записей на пользователя в тренировочном наборе...
+Формируем CatBoost Pool...
+Обучаем модель CatBoost на CPU...
+Default metric period is 5 because NDCG is/are not implemented for GPU
+Metric NDCG:type=Base is not implemented on GPU. Will use CPU for metric computation, this could significantly affect learning time
+Metric NDCG:type=Base is not implemented on GPU. Will use CPU for metric computation, this could significantly affect learning time
+0:	test: 0.4419393	best: 0.4419393 (0)	total: 398ms	remaining: 6m 37s
+500:	test: 0.4935587	best: 0.4936012 (480)	total: 1m 2s	remaining: 1m 1s
+999:	test: 0.4945233	best: 0.4945678 (855)	total: 2m 6s	remaining: 0us
+bestTest = 0.4945678196
+bestIteration = 855
+Shrink model to first 856 iterations.
+0.5311807485745386
+Делаем предсказания на тестовом наборе...
+Первые 10 предсказаний:
+[0.15037601 0.28556668 0.10884861 0.18578877 0.07180406 0.07447896
+ 0.05402852 0.09357182 0.10525763 0.03930457]
+
+30/2
+Загружаем данные...
+Объединяем таблицы...
+Формируем таргет...
+Разбиваем данные...
+Ограничиваем число записей на пользователя в тренировочном наборе...
+Формируем CatBoost Pool...
+Обучаем модель CatBoost на CPU...
+Default metric period is 5 because NDCG is/are not implemented for GPU
+Metric NDCG:type=Base is not implemented on GPU. Will use CPU for metric computation, this could significantly affect learning time
+Metric NDCG:type=Base is not implemented on GPU. Will use CPU for metric computation, this could significantly affect learning time
+0:	test: 0.4945247	best: 0.4945247 (0)	total: 244ms	remaining: 4m 3s
+500:	test: 0.5496279	best: 0.5496279 (500)	total: 17.5s	remaining: 17.4s
+999:	test: 0.5503618	best: 0.5504823 (970)	total: 34.6s	remaining: 0us
+bestTest = 0.5504822939
+bestIteration = 970
+Shrink model to first 971 iterations.
+0.5293500521274521
+Делаем предсказания на тестовом наборе...
+Первые 10 предсказаний:
+[ 0.07637852  0.0679793   0.06782204 -0.0281932  -0.03351128  0.11508411
+ -0.01837451 -0.03231382 -0.11631909  0.06072559]
+Времени всего прошло: 57.623836517333984
+
+30/12
+Загружаем данные...
+Объединяем таблицы...
+Формируем таргет...
+Разбиваем данные...
+Ограничиваем число записей на пользователя в тренировочном наборе...
+Формируем CatBoost Pool...
+Обучаем модель CatBoost на CPU...
+Default metric period is 5 because NDCG is/are not implemented for GPU
+Metric NDCG:type=Base is not implemented on GPU. Will use CPU for metric computation, this could significantly affect learning time
+Metric NDCG:type=Base is not implemented on GPU. Will use CPU for metric computation, this could significantly affect learning time
+0:	test: 0.4048245	best: 0.4048245 (0)	total: 765ms	remaining: 12m 44s
+500:	test: 0.4716899	best: 0.4718023 (470)	total: 2m 4s	remaining: 2m 3s
+999:	test: 0.4737197	best: 0.4737553 (995)	total: 4m 7s	remaining: 0us
+bestTest = 0.4737552787
+bestIteration = 995
+Shrink model to first 996 iterations.
+0.5400343696062441
+Делаем предсказания на тестовом наборе...
+Первые 10 предсказаний:
+[ 0.04064602 -0.02494124 -0.02436406 -0.0394015   0.11260664 -0.07895585
+  0.1217547  -0.05235444  0.02567451  0.02476142]
+Времени всего прошло: 304.1563801765442
+
+Default metric period is 5 because QueryCrossEntropy is/are not implemented for GPU
+0:	learn: 0.2254277	test: 0.2403775	best: 0.2403775 (0)	total: 1.2s	remaining: 1m 58s
+99:	learn: 0.2047085	test: 0.2209214	best: 0.2209214 (99)	total: 1m 55s	remaining: 0us
+bestTest = 0.2209214286
+bestIteration = 99
+0.5344531829664569
+        'iterations': 100,
+        'depth': 8,
+        'learning_rate': 0.05,
+        #'eval_metric': metric,
+        'loss_function': 'QueryCrossEntropy',
+
+
+//10/1
+Без сортировки
+0:	learn: 0.6929163	test: 0.6930900	best: 0.6930900 (0)	total: 564ms	remaining: 6m 34s
+500:	learn: 0.6485660	test: 0.6954046	best: 0.6925233 (180)	total: 2m 31s	remaining: 1m
+699:	learn: 0.6345481	test: 0.6980612	best: 0.6925233 (180)	total: 3m 32s	remaining: 0us
+
+bestTest = 0.6925233418
+bestIteration = 180
+
+Shrink model to first 181 iterations.
+0.5251391217518457
+0.5023333772578227
+С сортировкой:{
+0:	learn: 0.4990337	test: 0.6883828	best: 0.6883828 (0)	total: 153ms	remaining: 1m 47s
+500:	learn: 0.0014003	test: 1.4481391	best: 0.6883828 (0)	total: 2.55s	remaining: 1.01s
+699:	learn: 0.0013883	test: 1.4682550	best: 0.6883828 (0)	total: 3.46s	remaining: 0us
+
+bestTest = 0.6883828292
+bestIteration = 0
+
+Shrink model to first 1 iterations.
+0.5470085470085471
+0.40202595758151316
+
+0:	learn: 0.5833925	test: 0.6901090	best: 0.6901090 (0)	total: 157ms	remaining: 1m 49s
+500:	learn: 0.0014349	test: 1.1295340	best: 0.6901090 (0)	total: 5.15s	remaining: 2.04s
+699:	learn: 0.0014069	test: 1.1083318	best: 0.6901090 (0)	total: 7.15s	remaining: 0us
+
+bestTest = 0.6901090084
+bestIteration = 0
+
+Shrink model to first 1 iterations.
+0.5416270971826528
+        'iterations': 700,
+        'depth': 9,
+        'learning_rate': 0.05,
+        'loss_function': 'PairLogit',}
+
+//100/10
